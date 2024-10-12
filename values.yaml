@@ -1,0 +1,17 @@
+# Default values for nginx.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+deploy:
+  label: nginx
+  name: nginx
+  replicacount: 1
+  image: nginx:latest
+  port: 80
+service:
+  name: my-service
+  type: NodePort
+  label: nginx
+  port: 80
+  tarport: 80
+  nodeport: 30082
